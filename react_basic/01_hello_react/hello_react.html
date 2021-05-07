@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello_react</title>
+</head>
+<body>
+	<!-- 准备好一个“容器” -->
+	<div id="test"></div>
+
+	<!-- 引入react核心库 -->
+	<script type="text/javascript" src="../js/react.development.js"></script>
+	<!-- 引入react-dom，用于支持react操作DOM -->
+	<script type="text/javascript" src="../js/react-dom.development.js"></script>
+	<!-- 引入babel，用于将jsx转为js -->
+	<script type="text/javascript" src="../js/babel.min.js"></script>
+
+	<script type="text/babel" > /* 此处一定要写babel 表示这里边写的是jsx而不是js，并且要靠babel进行转译*/
+		//1.创建虚拟DOM
+		const VDOM = <h1>Hello,React</h1>
+		/* 此处一定不要写引号，因为不是字符串，它是虚拟DOM(这里是jsx，标签可以和其他js混着写)*/
+		//2.渲染虚拟DOM到页面
+		ReactDOM.render(VDOM,document.getElementById('test'))
+		/*括号里分别为虚拟(DOM，容器)，此外React不提供选择器的写法，因此不能写#test*/
+		//Jquery封装了很多高级操作DOM的方法，但是React里又不让我们操作DOM，因此这里引入JQuery不合适
+		//但是babel这么写不能用于真实生产开发中，因为需要浏览器通过babel现场把jsx翻译成js，耗时！先学语法，之后再换平台写，之后会加脚手架和开发者工具。
+	</script>
+</body>
+</html>
