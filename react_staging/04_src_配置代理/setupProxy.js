@@ -1,3 +1,5 @@
+//不用ES6，用CJS(Common JS)
+//脚手架会找到setupProxy文件并把配置加到webpack里(node里的语法 CJS)
 const proxy = require('http-proxy-middleware')
 
 module.exports = function(app){
