@@ -2,7 +2,7 @@
 import React from 'react'
 //引入ReactDOM
 import ReactDOM from 'react-dom'
-//引入路由器管理
+//
 import {BrowserRouter} from 'react-router-dom'
 //引入App
 import App from './App'
