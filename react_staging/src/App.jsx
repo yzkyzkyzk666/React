@@ -36,8 +36,8 @@ export default class App extends Component{
 							{/*<NavLink activeClassName="yzk" className="list-group-item" to="/home">Home</NavLink>*/}
 							{/*标签体也是一种特殊的标签属性，key为children*/}
 
-							<MyNavLink to="/about">About</MyNavLink>
-							<MyNavLink to="/home">Home</MyNavLink>
+							<MyNavLink to="/yzk/about">About</MyNavLink>
+							<MyNavLink to="/yzk/home">Home</MyNavLink>
 
 							{/*</BrowserRouter>*/}
 						</div>
@@ -52,9 +52,9 @@ export default class App extends Component{
 								{/*1.通常情况下，path和component是一一对应的关系。*/}
 								{/*2.Switch可以提高路由匹配效率(单一匹配)。*/}
 								<Switch>
-									<Route path="/about" component={About}/>
-									<Route path="/home" component={Home}/>
-									<Route path="/home" component={Test}/>
+									<Route path="/yzk/about" component={About}/>
+									<Route path="/yzk/home" component={Home}/>
+									<Route path="/yzk/home" component={Test}/>
 								</Switch>
 								{/*</BrowserRouter>*/}
 							</div>
