@@ -38,6 +38,7 @@ export default class App extends Component{
 
 							<MyNavLink to="/yzk/about">About</MyNavLink>
 							<MyNavLink to="/yzk/home">Home</MyNavLink>
+							{/*<MyNavLink to="/home/a/b">Home</MyNavLink>*/}
 
 							{/*</BrowserRouter>*/}
 						</div>
@@ -54,6 +55,7 @@ export default class App extends Component{
 								<Switch>
 									<Route path="/yzk/about" component={About}/>
 									<Route path="/yzk/home" component={Home}/>
+									{/*<Route exact path="/home" component={Home} 不到需要不要用严格匹配/>*/}
 									<Route path="/yzk/home" component={Test}/>
 								</Switch>
 								{/*</BrowserRouter>*/}
