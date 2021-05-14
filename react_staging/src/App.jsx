@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
-import {NavLink,BrowserRouter,Route} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import About from './pages/About'
 import Home from './pages/Home'
 import Header from './components/Header'
+import MyNavLink from './components/MyNavLink'
 
 export default class App extends Component{
 	render(){
@@ -30,8 +31,13 @@ export default class App extends Component{
 
 							{/*NavLink的设计理念是你点谁他就会给谁默认追加一个央视的类名active，刚好bootstrap里带active类名的会高亮*/}
 							{/*当然NaveLink里也可以自定义activeClassName="xxx"(默认是active可不写)*/}
-							<NavLink activeClassName="yzk" className="list-group-item" to="/about">About</NavLink>
-							<NavLink activeClassName="yzk" className="list-group-item" to="/home">Home</NavLink>
+							{/*<NavLink activeClassName="yzk" className="list-group-item" to="/about">About</NavLink>*/}
+							{/*<NavLink activeClassName="yzk" className="list-group-item" to="/home">Home</NavLink>*/}
+							{/*标签体也是一种特殊的标签属性，key为children*/}
+
+							<MyNavLink to="/about">About</MyNavLink>
+							<MyNavLink to="/home">Home</MyNavLink>
+
 							{/*</BrowserRouter>*/}
 						</div>
 					</div>
