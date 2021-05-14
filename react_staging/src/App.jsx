@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import {Route} from 'react-router-dom'
+import {Route,Switch} from 'react-router-dom'
 import About from './pages/About'
 import Home from './pages/Home'
 import Header from './components/Header'
 import MyNavLink from './components/MyNavLink'
+import Test from './components/Test'
 
 export default class App extends Component{
 	render(){
@@ -47,8 +48,14 @@ export default class App extends Component{
 								{/*注册路由---就是一个映射关系*/}
 								{/*必须在Route外侧包裹一个Router,Router必须指定是BrowserRouter还是HashRouter*/}
 								{/*<BrowserRouter>*/}
-								<Route path="/about" component={About}/>
-								<Route path="/home" component={Home}/>
+
+								{/*1.通常情况下，path和component是一一对应的关系。*/}
+								{/*2.Switch可以提高路由匹配效率(单一匹配)。*/}
+								<Switch>
+									<Route path="/about" component={About}/>
+									<Route path="/home" component={Home}/>
+									<Route path="/home" component={Test}/>
+								</Switch>
 								{/*</BrowserRouter>*/}
 							</div>
 						</div>
