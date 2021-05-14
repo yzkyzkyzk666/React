@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Route,Switch} from 'react-router-dom'
+import {Route,Switch,Redirect} from 'react-router-dom'
 import About from './pages/About'
 import Home from './pages/Home'
 import Header from './components/Header'
@@ -36,8 +36,11 @@ export default class App extends Component{
 							{/*<NavLink activeClassName="yzk" className="list-group-item" to="/home">Home</NavLink>*/}
 							{/*标签体也是一种特殊的标签属性，key为children*/}
 
-							<MyNavLink to="/yzk/about">About</MyNavLink>
-							<MyNavLink to="/yzk/home">Home</MyNavLink>
+							{/*<MyNavLink to="/yzk/about">About</MyNavLink>*/}
+							{/*<MyNavLink to="/yzk/home">Home</MyNavLink>*/}
+
+							<MyNavLink to="/about">About</MyNavLink>
+							<MyNavLink to="/home">Home</MyNavLink>
 							{/*<MyNavLink to="/home/a/b">Home</MyNavLink>*/}
 
 							{/*</BrowserRouter>*/}
@@ -53,10 +56,15 @@ export default class App extends Component{
 								{/*1.通常情况下，path和component是一一对应的关系。*/}
 								{/*2.Switch可以提高路由匹配效率(单一匹配)。*/}
 								<Switch>
-									<Route path="/yzk/about" component={About}/>
-									<Route path="/yzk/home" component={Home}/>
+									{/*<Route path="/yzk/about" component={About}/>*/}
+									{/*<Route path="/yzk/home" component={Home}/>*/}
+									{/*<Route path="/yzk/home" component={Test}/>*/}
+
+									<Route path="/about" component={About}/>
+									<Route path="/home" component={Home}/>
 									{/*<Route exact path="/home" component={Home} 不到需要不要用严格匹配/>*/}
-									<Route path="/yzk/home" component={Test}/>
+									<Route path="/home" component={Test}/>
+									<Redirect to="/home"/>
 								</Switch>
 								{/*</BrowserRouter>*/}
 							</div>
