@@ -72,8 +72,8 @@
 
 ## 七、解决多级路径刷新页面样式丢失的问题
 				1.public/index.html 中 引入样式时不写 ./ 写 / （常用）
-				2.public/index.html 中 引入样式时不写 ./ 写 %PUBLIC_URL% （常用）
-				3.使用HashRouter
+				2.public/index.html 中 引入样式时不写 ./ 写 %PUBLIC_URL% （常用）(只适用在React里)
+				3.使用HashRouter(#后面的都被认为是前端资源，不带给服务器)
 
 ## 八、路由的严格匹配与模糊匹配
 				1.默认使用的是模糊匹配（简单记：【输入的路径】必须包含要【匹配的路径】，且顺序要一致）
