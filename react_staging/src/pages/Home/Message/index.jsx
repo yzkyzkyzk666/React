@@ -30,7 +30,6 @@ export default class Message extends Component{
                 <hr/>
                 {/*路由组件声明接收params参数*/}
                 <Route path="/home/message/detail/:id/:title" component={Detail}/>
-                {/*<Redirect to="/home/message/detail/:id/:title" />*/}
             </div>
         )
     }
