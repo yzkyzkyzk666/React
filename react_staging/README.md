@@ -102,7 +102,7 @@
 							路由链接(携带参数)：<Link to='/demo/test?name=tom&age=18'}>详情</Link>
 							注册路由(无需声明，正常注册即可)：<Route path="/demo/test" component={Test}/>
 							接收参数：this.props.location.search
-							备注：获取到的search是urlencoded编码字符串，需要借助querystring解析
+							备注：获取到的search是urlencoded编码字符串，需要借助querystring解析---qs.stringfy  qs.parse
 				3.state参数
 							路由链接(携带参数)：<Link to={{pathname:'/demo/test',state:{name:'tom',age:18}}}>详情</Link>
 							注册路由(无需声明，正常注册即可)：<Route path="/demo/test" component={Test}/>
