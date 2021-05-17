@@ -16,7 +16,7 @@ export default class Detail extends Component{
         // const {search} = this.props.location
         // const {id,title} = qs.parse(search.slice(1))
 
-        //接收search参数
+        //接收state参数
         const {id,title} = this.props.location.state || {}
 
         const findResult = detailData.find((detailObj)=>{
