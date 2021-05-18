@@ -7,7 +7,7 @@ export default class Count extends Component{
     increment=()=>{
         const {value} = this.selectNumber
         const {count} = this.state
-        console.log(this.selectNumber,count,value)
+        // console.log(this.selectNumber,count,value)
         this.setState({count:count+value*1})
     }
     decrement=()=>{
