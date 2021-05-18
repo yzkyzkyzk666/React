@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import {Button,DatePicker} from 'antd'
 import {GithubOutlined} from '@ant-design/icons'
-import moment from 'moment';
-import 'antd/dist/antd.css'
+import './App.less';
 const { RangePicker } = DatePicker;
 
 export default class App extends Component {
