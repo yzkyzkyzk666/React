@@ -1327,7 +1327,7 @@ function unstable_wrap(callback) {
     subscriber.onWorkScheduled(wrappedInteractions, threadID);
   }
 
-  // Update the pending async work count for the current interactions.
+  // Update the pending async work Count for the current interactions.
   // Update after calling subscribers in case of error.
   wrappedInteractions.forEach(function (interaction) {
     interaction.__count++;
