@@ -5,7 +5,7 @@ import {
     actionIncrementCreater,
     actionDecrementCreater,
     actionIncrementAsyncCreater
-} from '../../redux/actions/count'
+} from '../../redux/count_actionCreater'
 import React, {Component} from "react";
 
 /*
@@ -59,8 +59,7 @@ class CountUI extends Component{
     render(){
         return(
             <div>
-                <h2>Count Component</h2>
-                <h3>sum:{this.props.count}</h3>
+                <h2>sum:{this.props.count}</h2>
                 <select ref={c => this.selectNumber = c}>
                     <option value="1">1</option>
                     <option value="2">2</option>

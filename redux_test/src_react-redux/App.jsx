@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Count from './containers/Count'
 // import store from './redux/store'
-import Person from './containers/Person'
 
 export default class App extends Component {
 	render() {
@@ -9,8 +8,6 @@ export default class App extends Component {
 			<div>
 				{/*<Count store={store}/>*/}
 				<Count/>
-				<hr/>
-				<Person/>
 			</div>
 		)
 	}
