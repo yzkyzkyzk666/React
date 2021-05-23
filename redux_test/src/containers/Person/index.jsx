@@ -1,11 +1,13 @@
 import React,{Component} from 'react'
+import {v4 as uuid} from 'uuid'
 
 export default class Person extends Component{
 
     addPerson=()=>{
         const name = this.nameNode.value
         const age = this.ageNode.value
-        console.log(name,age)
+        const personObj = {id:uuid(),name,age}
+        console.log(personObj)
     }
 
     render(){
