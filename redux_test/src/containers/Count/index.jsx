@@ -59,7 +59,7 @@ class CountUI extends Component{
     render(){
         return(
             <div>
-                <h2>Count Component</h2>
+                <h2>Count Component, Records of Person:{this.props.personResult.length}</h2>
                 <h3>sum:{this.props.count}</h3>
                 <select ref={c => this.selectNumber = c}>
                     <option value="1">1</option>
@@ -77,7 +77,7 @@ class CountUI extends Component{
 
 
 export default connect(
-    state=>({count:state}), //箭头函数想默认返回一个对象要包小括号
+    state=>({count:state.count,personResult:state.people}), //箭头函数想默认返回一个对象要包小括号
 
     //简化 一般形式
     /*dispatch=>({
