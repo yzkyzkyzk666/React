@@ -49,6 +49,7 @@ function Demo(){
 	const [count,setCount] = React.useState(0)
 	const myRef = React.useRef()
 
+	//useEffect可以看作componentDidMount(空数组[])+componentDidUpdate(不加[]或指定[count,name])+componentWillUnmount(return返回值)
 	React.useEffect(()=>{
 		let timer = setInterval(()=>{
 			setCount(count => count+1 )
@@ -56,7 +57,7 @@ function Demo(){
 		return ()=>{
 			clearInterval(timer)
 		}
-	},[])
+	},[])//不加[],谁都监测，加了[],谁都不监测，[count]只监测count
 
 	//加的回调
 	function add(){
