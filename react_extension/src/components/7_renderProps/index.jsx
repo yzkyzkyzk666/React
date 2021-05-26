@@ -7,7 +7,7 @@ export default class Parent extends Component {
 		return (
 			<div className="parent">
 				<h3>我是Parent组件</h3>
-				<A render={(name)=><C name={name}/>}/>
+				<A render={(name)=><B name={name}/>}/>
 			</div>
 		)
 	}
